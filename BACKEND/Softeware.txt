@@ -5,3 +5,14 @@ command :
 node -v
 npm -v
 
+
+
+https://github.com/debasishsahoo/NSEC-IT
+
+
+# to Create Package.json
+npm init -y
+
+
+#  Express freamwork
+npm i express
