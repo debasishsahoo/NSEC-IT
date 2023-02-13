@@ -1,15 +1,15 @@
 const express = require('express')
 
+const PORT = 5000
+
 const app = express()
+
 
 
 app.get('/', ((request, response) => {
     response.send('GET() is Invoked')
 }));
 
-app.post('/', ((request, response) => {
-    response.send('POST() is Invoked.')
-}));
 app.put('/', ((request, response) => {
     response.send('PUT() is Invoked.')
 }));
@@ -23,6 +23,6 @@ app.delete('/', ((request, response) => {
 
 
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
     console.log('Application is Running on 5000.')
 })
