@@ -1,0 +1,7 @@
+Nodejs => 16.19.0
+
+command :
+
+node -v
+npm -v
+
