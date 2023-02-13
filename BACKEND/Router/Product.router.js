@@ -2,7 +2,7 @@ const express = require('express')
 
 const router = express.Router();
 
-//Router Path
+
 
 //Create Product
 router.post('/', ((request, response) => {
@@ -33,3 +33,6 @@ router.patch('/:id', ((request, response) => {
 router.delete('/:id', ((request, response) => {
     response.send('Delete Single Product ')
 }));
+
+
+export default router
