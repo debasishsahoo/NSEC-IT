@@ -13,6 +13,6 @@ const AllProduct = (request, response) => {
 }
 
 
-export default {
+module.exports = {
     CreateProduct, SingleProduct, AllProduct
 }
