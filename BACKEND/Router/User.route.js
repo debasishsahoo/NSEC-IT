@@ -2,33 +2,31 @@ const express = require('express')
 
 const router = express.Router();
 
-import { CreateProduct, SingleProduct, AllProduct } from '../Controller/Product.controller'
+module.exports = {
+    Createuser, Singleuser, Alluser, Updateuser, Deleteuser
+}
+
+
 
 
 
 //Create Product
-router.post('/', CreateProduct);
+router.post('/', Createuser);
 
 //View All Product
-router.get('/', AllProduct);
+router.get('/', Alluser);
 
 //View Single Product
-router.get('/:id', SingleProduct);
+router.get('/:id', Singleuser);
 
 //Update Single Product
-router.put('/:id', ((request, response) => {
-    response.send('Update Single Product ')
-}));
+router.put('/:id', Updateuser);
 
 //Update Single Product
-router.patch('/:id', ((request, response) => {
-    response.send('Update Single Product ')
-}));
+router.patch('/:id', Updateuser);
 
 //Delete Single Product
-router.delete('/:id', ((request, response) => {
-    response.send('Delete Single Product ')
-}));
+router.delete('/:id', Deleteuser);
 
 
 module.exports = router

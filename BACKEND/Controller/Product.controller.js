@@ -12,7 +12,15 @@ const AllProduct = (request, response) => {
     response.send('All Product ')
 }
 
+const UpdateProduct = (request, response) => {
+    response.send('Update Product ')
+}
+const DeleteProdcut = (request, response) => {
+    response.send('Delete Product ')
+}
+
+
 
 module.exports = {
-    CreateProduct, SingleProduct, AllProduct
+    CreateProduct, SingleProduct, AllProduct, UpdateProduct, DeleteProdcut
 }
