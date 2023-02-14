@@ -2,10 +2,9 @@ const express = require('express')
 
 const router = express.Router();
 
-module.exports = {
+import {
     Createuser, Singleuser, Alluser, Updateuser, Deleteuser
-}
-
+} from '../Controller/User.Controller'
 
 
 
