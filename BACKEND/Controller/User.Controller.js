@@ -13,6 +13,8 @@ export const signupUser = async (request, response) => {
         name: request.body.name,
         password: request.body.password
     }
+
+
     if (!user.username || !user.name || !user.password) {
         return response.status(400).json({ msg: 'Please Provide Data for sign up' });
     }
@@ -27,15 +29,15 @@ export const signupUser = async (request, response) => {
     const salt = 10;
     const hashedPassword = await bcrypt.hash(user.password, salt);
 
-    user = {
-        username: request.body.username,
-        name: request.body.name,
+    let newuser = {
+        username: user.username,
+        name: user.username,
         password: hashedPassword
     }
 
 
     try {
-        const newUser = new User(user);
+        const newUser = new User(newuser);
         await newUser.save();
 
         return response.status(200).json({ msg: 'Signup successfully' });
@@ -51,8 +53,10 @@ export const loginUser = async (request, response) => {
 
     try {
         let match = await bcrypt.compare(request.body.password, user.password);
+
         if (match) {
             const accessToken = jwt.sign(user.toJSON(), process.env.ACCESS_SECRET_KEY, { expiresIn: '15m' });
+
             const refreshToken = jwt.sign(user.toJSON(), process.env.REFRESH_SECRET_KEY);
 
             const newToken = new Token({ token: refreshToken });
@@ -69,6 +73,7 @@ export const loginUser = async (request, response) => {
 };
 export const logoutUser = async (request, response) => {
     const token = request.body.token;
+    console.log(token)
     await Token.deleteOne({ token: token });
 
     response.status(204).json({ msg: 'logout successfully' });
