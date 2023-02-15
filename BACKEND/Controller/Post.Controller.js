@@ -1,4 +1,5 @@
-import Post from '../Model/Post.Model';
+import dotenv from 'dotenv';
+import Post from '../Model/Post.Model.js';
 
 dotenv.config()
 

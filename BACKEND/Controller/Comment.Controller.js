@@ -1,4 +1,5 @@
-import Comment from '../Model/Comment.Model';
+import dotenv from 'dotenv';
+import Comment from '../Model/Comment.Model.js';
 
 dotenv.config()
 

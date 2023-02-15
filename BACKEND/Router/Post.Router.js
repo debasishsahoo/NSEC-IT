@@ -1,8 +1,8 @@
 import express from 'express';
 const router = express.Router();
 
-import { createPost, updatePost, deletePost, getPost, getAllPosts } from '../Controller/Post.Controller'
-import { authenticateToken } from '../Controller/JWT.Controller'
+import { createPost, updatePost, deletePost, getPost, getAllPosts } from '../Controller/Post.Controller.js'
+import { authenticateToken } from '../Controller/JWT.Controller.js'
 
 router.post('/create', createPost);
 router.put('/update/:id', updatePost);
