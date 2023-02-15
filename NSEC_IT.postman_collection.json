@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "a31bba8b-7c7e-45be-9113-5c23a38d5bbe",
+		"name": "NSEC_IT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14840080"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"debasish\",\r\n    \"username\":\"b@a.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/user/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"a@a.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2VjYTZjMmE0Mjk2ZmU0YmYzY2Y0MWYiLCJuYW1lIjoiYUBhLmNvbSIsInVzZXJuYW1lIjoiYUBhLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEhCZUtCYUpsVHZaRlFnMWlaMDVMci52Zkh6Q3daTXMweWpWY2xCV2VPZlR6OEtBNUpJOVg2IiwiX192IjowLCJpYXQiOjE2NzY0NTU0NDR9.96cWf4ICfZKJegUNBgaTxqdlMX6XwkZ7lENS0mYI5hI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/user/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": []
+		},
+		{
+			"name": "Comment",
+			"item": []
+		}
+	]
+}
