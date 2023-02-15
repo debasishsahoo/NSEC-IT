@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 
+mongoose.set('strictQuery', false);
 const Connection = async () => {
     const URL = `mongodb://localhost:27017/nsecblog`
     try {
