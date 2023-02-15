@@ -7,6 +7,6 @@ import User from '../Model/User.model';
 
 dotenv.config();
 
-export const signupUser = async (request, response) => { };
+export default signupUser = async (request, response) => { };
 export const loginUser = async (request, response) => { };
 export const logoutUser = async (request, response) => { };

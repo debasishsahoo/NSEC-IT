@@ -1,9 +1,11 @@
 import express from 'express';
 const router = express.Router();
 
-router.post('/login', () => { });
-router.post('/signup', () => { });
-router.post('/logout', () => { });
+import signupUser, { loginUser, logoutUser } from '../Controller/User.Controller'
+
+router.post('/login', loginUser);
+router.post('/signup', signupUser);
+router.post('/logout', logoutUser);
 router.post('/token', () => { });
 
 export default router;
