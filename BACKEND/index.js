@@ -1,19 +1,20 @@
-const express = require('express')
-const ProductRouter = require('./Router/Product.router')
-const UserRouter = require('./Router/User.route')
+import express from 'express';
+import dotenv from 'dotenv';
+import cors from 'cors';
+import bodyParser from 'body-parser';
 
-const PORT = 5000
+import Connection from './database/db.js';
 
-const app = express()
+dotenv.config();
+
+const app = express();
+
+app.use(cors());
+app.use(bodyParser.json({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
+const PORT = 8000;
 
 
-//! Demo Url: https://localhost:5000/api/product/
+Connection();
 
-app.use('/api/product', ProductRouter)
-app.use('/api/user', UserRouter)
-
-
-
-app.listen(PORT, () => {
-    console.log('Application is Running on 5000.')
-})
+app.listen(PORT, () => console.log(`Server is running successfully on PORT ${PORT}`));
