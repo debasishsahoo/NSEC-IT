@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
-import Token from '../Model/Post.Model';
+import Token from '../Model/Token.Model';
 
 dotenv.config();
 
