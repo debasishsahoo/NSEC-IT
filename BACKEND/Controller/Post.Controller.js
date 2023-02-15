@@ -1,4 +1,4 @@
-import Post from '../model/post.js';
+import Post from '../Model/Post.Model';
 
 dotenv.config()
 

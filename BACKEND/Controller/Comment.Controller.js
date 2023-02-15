@@ -1,4 +1,4 @@
-import Comment from '../model/comment.js';
+import Comment from '../Model/Comment.Model';
 
 dotenv.config()
 
