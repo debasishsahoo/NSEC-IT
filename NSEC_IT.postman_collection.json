@@ -227,7 +227,79 @@
 		},
 		{
 			"name": "Comment",
-			"item": []
+			"item": [
+				{
+					"name": "New Comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"a@a.com\",\r\n    \"postId\":\"63ed32b21709e822ab74dcab\",\r\n    \"data\":\"Thursday, 16 February, 2023\",\r\n    \"comments\":\"jnfcpikqwejnfcikeqwjfciqewjfdiqewjfdfnqweohfoqewhfoqjhfdoqweihfd\"\r\n    \r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/comment/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comment",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/comment/comments/63edcd99a29030d311789d2a",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comment",
+								"comments",
+								"63edcd99a29030d311789d2a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/comment/delete/63edcd99a29030d311789d2a",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comment",
+								"delete",
+								"63edcd99a29030d311789d2a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
