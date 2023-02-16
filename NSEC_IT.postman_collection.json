@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"debasish\",\r\n    \"username\":\"b@a.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"raw": "{\r\n    \"name\":\"debasish\",\r\n    \"username\":\"d@d.com\",\r\n    \"password\":\"123456\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -70,17 +70,18 @@
 				{
 					"name": "Logout",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2VjYTZjMmE0Mjk2ZmU0YmYzY2Y0MWYiLCJuYW1lIjoiYUBhLmNvbSIsInVzZXJuYW1lIjoiYUBhLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEhCZUtCYUpsVHZaRlFnMWlaMDVMci52Zkh6Q3daTXMweWpWY2xCV2VPZlR6OEtBNUpJOVg2IiwiX192IjowLCJpYXQiOjE2NzY0NTg1NTksImV4cCI6MTY3NjQ1OTQ1OX0.VWgeN3aGDYyNGNBiO30Cwso0KnAi-IbBTbgB1MqyEGU",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2VjYTZjMmE0Mjk2ZmU0YmYzY2Y0MWYiLCJuYW1lIjoiYUBhLmNvbSIsInVzZXJuYW1lIjoiYUBhLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEhCZUtCYUpsVHZaRlFnMWlaMDVMci52Zkh6Q3daTXMweWpWY2xCV2VPZlR6OEtBNUpJOVg2IiwiX192IjowLCJpYXQiOjE2NzY0NTU0NDR9.96cWf4ICfZKJegUNBgaTxqdlMX6XwkZ7lENS0mYI5hI\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "localhost:8000/api/user/logout",
 							"host": [
@@ -100,7 +101,129 @@
 		},
 		{
 			"name": "POST",
-			"item": []
+			"item": [
+				{
+					"name": "CreatePost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Demo Title\",\r\n    \"description\":\"Demo Desc\",\r\n    \"picture\":\"Demo Pic\",\r\n    \"username\":\"a@a.com\",\r\n    \"categories\":\"tech\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/post/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePost",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Demo Title1\",\r\n    \"description\":\"Demo description\",\r\n    \"picture\":\"Demo Pic\",\r\n    \"username\":\"abc@a.com\",\r\n    \"categories\":\"react\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/post/update/63ed32a11709e822ab74dca6",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"update",
+								"63ed32a11709e822ab74dca6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePeople",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/post/delete/63ed32a11709e822ab74dca6",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"delete",
+								"63ed32a11709e822ab74dca6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SinglePost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/post/post/63ed32a11709e822ab74dca6",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"post",
+								"63ed32a11709e822ab74dca6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AllPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/post/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "Comment",
