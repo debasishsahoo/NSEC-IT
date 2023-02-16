@@ -4,9 +4,9 @@ import Token from "../Model/Token.Model.js";
 
 dotenv.config();
 
-export const authenticateToken = async (request, response, next) => {
-	const authHeader = request.headers["authorization"];
-	const token = authHeader && authHeader.split(" ")[1];
+export const authenticateToken = async (request, response) => {
+    const authHeader = request.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1];
 
 	if (token == null) {
 		return response.status(401).json({ msg: "token is missing" });
