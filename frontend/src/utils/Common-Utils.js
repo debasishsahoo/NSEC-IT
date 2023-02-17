@@ -1,3 +1,5 @@
+
+
 export const getAccessToken = () => {
     return sessionStorage.getItem('accessToken');
 }
@@ -7,11 +9,11 @@ export const getRefreshToken = () => {
 }
 
 export const setAccessToken = (accessToken) => {
-    return sessionStorage.setItem('accessToken', `Bearer ${accessToken}`);
+    sessionStorage.setItem('accessToken', `Bearer ${accessToken}`);
 }
 
 export const setRefreshToken = (refreshToken) => {
-    return sessionStorage.setItem('refreshToken', `Bearer ${refreshToken}`);
+    sessionStorage.setItem('refreshToken', `Bearer ${refreshToken}`);
 }
 
 export const getType = (value, body) => {
